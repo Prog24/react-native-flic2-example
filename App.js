@@ -22,6 +22,8 @@ const App = () => {
       Flic2.addListener('managerInitialized', onInitialized);
     }
     Flic2.addListener('didReceiveButtonClick', didReceiveButtonClick);
+    Flic2.addListener('didReceiveButtonHold', didReceiveButtonHold);
+    Flic2.addListener('didReceiveButtonDoubleClick', didReceiveButtonDouble);
     Flic2.addListener('scanResult', onScanResult);
   }, []);
 
@@ -127,6 +129,44 @@ const App = () => {
     getButtons();
     // do something with the click like showing a notification
     Toast.show(`Button ${eventData.button.getName()} has been pressed ${eventData.button.getPressCount()} times`);
+
+    // wobble
+    // we do this extensive check because when you develop the app with live reload, the _logoRef will break.
+    if (typeof this._logoRef !== 'undefined' && this._logoRef !== null && typeof this._logoRef.wobble === 'function') {
+
+      // wobble wobble
+      this._logoRef.wobble();
+
+    }
+    // vibrate
+    Vibration.vibrate(200);
+  };
+
+  const didReceiveButtonHold = (eventData) => {
+    console.log('Received hold event', eventData);
+    // update list
+    getButtons();
+    // do something with the click like showing a notification
+    Toast.show(`Button ${eventData.button.getName()} has been hold ${eventData.button.getPressCount()} times`);
+
+    // wobble
+    // we do this extensive check because when you develop the app with live reload, the _logoRef will break.
+    if (typeof this._logoRef !== 'undefined' && this._logoRef !== null && typeof this._logoRef.wobble === 'function') {
+
+      // wobble wobble
+      this._logoRef.wobble();
+
+    }
+    // vibrate
+    Vibration.vibrate(200);
+  };
+
+  const didReceiveButtonDouble = (eventData) => {
+    console.log('Received double event', eventData);
+    // update list
+    getButtons();
+    // do something with the click like showing a notification
+    Toast.show(`Button ${eventData.button.getName()} has been double ${eventData.button.getPressCount()} times`);
 
     // wobble
     // we do this extensive check because when you develop the app with live reload, the _logoRef will break.
