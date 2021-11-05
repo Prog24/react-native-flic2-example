@@ -7,6 +7,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Flic2Example' do
   
  config = use_native_modules!
+ permissions_path = '../node_modules/react-native-permissions/ios'
+ pod 'Permission-BluetoothPeripheral', :path => "#{permissions_path}/BluetoothPeripheral.podspec"
 
  use_react_native!(:path => config["reactNativePath"])
   

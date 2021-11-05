@@ -156,6 +156,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				BE579DAFE82204694E148BE5 /* [CP] Copy Pods Resources */,
+				19746F0E17BA6F96023AA6BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,7 +177,7 @@
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = F3QAJQJAUN;
+						DevelopmentTeam = 7544K2E5XD;
 					};
 				};
 			};
@@ -225,6 +226,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		19746F0E17BA6F96023AA6BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flic2Example/Pods-Flic2Example-frameworks.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-flic2/ios/Frameworks/flic2lib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/flic2lib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flic2Example/Pods-Flic2Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		446F2737A1B6CB0262675FEF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -319,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = F3QAJQJAUN;
+				DEVELOPMENT_TEAM = 7544K2E5XD;
 				INFOPLIST_FILE = Flic2Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.1.0;
@@ -328,7 +347,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.xguard.flic2example;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.suzuki.flic2Example;
 				PRODUCT_NAME = Flic2Example;
 				VALID_ARCHS = "arm64 arm64e";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -341,7 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F3QAJQJAUN;
+				DEVELOPMENT_TEAM = 7544K2E5XD;
 				INFOPLIST_FILE = Flic2Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 0.1.0;
@@ -350,7 +369,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.xguard.flic2example;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.suzuki.flic2Example;
 				PRODUCT_NAME = Flic2Example;
 				VALID_ARCHS = "arm64 arm64e";
 				VERSIONING_SYSTEM = "apple-generic";
